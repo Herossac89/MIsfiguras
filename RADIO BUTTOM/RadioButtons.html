@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementación de Radio button</title>
+</head>
+
+<body>
+    <p>Selecciona el primer número</p>
+    <div>
+        <input type="radio" name="grupo1" value=10 id="valor1" checked="true">
+        <label for="valor1">10</label>
+    </div>
+    <div>
+        <input type="radio" name="grupo1" value=14 id="valor2" disabled>
+        <label for="valor2">14</label>
+    </div>
+    <div>
+        <input type="radio" name="grupo1" value=22 id="valor3">
+        <label for="valor3">22</label>
+    </div>
+
+    <p>Selecciona el segundo número</p>
+    <div>
+        <input type="radio" name="grupo2" value=45 id="valor4" checked="true">
+        <label for="valor4">45</label>
+    </div>
+    <div>
+        <input type="radio" name="grupo2" value=33 id="valor5">
+        <label for="valor5">33</label>
+    </div>
+    <div>
+        <input type="radio" name="grupo2" value=18 id="valor6">
+        <label for="valor6">18</label>
+    </div>
+
+    <p><button id='sumar'>Sumar</button></p>  
+    <p id='textosalida'></p>
+        
+    <script>
+            document.getElementById('sumar').addEventListener('click', function() {
+            let numerogrupo1 = document.querySelector('input[name="grupo1"]:checked').value;
+            let numerogrupo2 = document.querySelector('input[name="grupo2"]:checked').value;
+            let resultado = parseInt(numerogrupo1) +  parseInt(numerogrupo2);
+            textosalida.innerText = numerogrupo1 + ' ' + '+' + ' '+ numerogrupo2 + ' '+ '=' + ' ' + resultado;
+        });
+    </script>
+</body>
+</html>

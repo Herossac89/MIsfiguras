@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Merriweather:wght@300;400&family=Oswald:wght@200;600&family=PT+Serif:wght@400;700&family=Roboto+Slab:wght@100&family=Young+Serif&display=swap');
+
+.contenedormenu {
+    display: flex;
+}
+.navar a{
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+}
+.header{
+    border: solid black 12px;
+    background: linear-gradient(140deg, rgba(36,0,0,1) 0%, rgba(133,38,115,1) 35%, rgba(140,20,191,1) 66%, rgb(227, 211, 239) 100%);
+}
+.navar{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 300px;
+    padding: 30px;
+    font-size: 25px;
+
+}
+.logo a{
+    font-size: 25px;
+
+}
+.toma1{
+    margin: 10px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border: solid 9px;
+}
+body{
+    background-color: black;
+}
+.titulo{
+    background: linear-gradient(140deg, rgb(6, 6, 6) 0%, rgb(98, 4, 4) 35%, rgb(46, 23, 56) 66%, rgb(227, 211, 239) 100%);
+    width: 50%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 25%;
+    margin: 50px;
+    text-align: center;
+
+}
+.titulo p{
+    color: rgb(254, 253, 253);
+    font-family: "Kanit";
+    font-size: 128px;
+    
+}
+.txt1{
+    animation-duration: 6s ;
+    
+    animation-name: slender;
+   
+}
+@keyframes slender{
+    from{
+        margin-left: 100%;
+        width: 300%;
+        transition: all ease-in-out;
+        -webkit-transition: all ease-in-out;
+        -moz-transition: all ease-in-out;
+        -ms-transition: all ease-in-out;
+        -o-transition: all ease-in-out;
+    }
+    to{
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Lato:wght@400;700&family=Martian+Mono:wght@100;600&family=Montserrat:ital,wght@1,100&family=Mooli&family=Oswald:wght@300&family=Playfair+Display:wght@400;500;700&family=Roboto:ital,wght@0,400;0,500;0,900;1,500&family=Young+Serif&display=swap');
+*{
+margin: 0px;
+padding: 0px;
+}
+.header{
+    width: 97%;
+    background: linear-gradient(140deg, rgb(7, 1, 1) 0%, rgb(80, 14, 35) 35%, rgb(74, 4, 75) 66%, rgb(50, 4, 51)100%);
+    font-size: 29px;
+    border: solid 18px;
+    padding:5px;
+    
+}
+ 
+
+.contenedormenu {
+    display: flex;
+}
+.navar{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 300px;
+    padding: 30px;
+  
+} 
+.navar a{
+    color: white;
+    font-size: 30px;
+    font-family: cursive;
+}  
+
+body{
+}
+.toma1{
+    margin: 10px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border: solid 9px;
+}
+.titulo{
+    font-size: 70px;
+text-align: center;    
+}
+.enlaces{
+    color: black;
+    text-decoration: none;
+
+}
+.csspreguntas{
+    border: solid black 12px;
+    align-items: center;
+    text-align: center;
+    width: 620px;
+    height: 50px;
+margin-left: auto;
+margin-right: auto;
+padding: 30px;
+font-size: 22px;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.csspreguntas select{
+    font-size: 15.5px;
+width: 223px;
+border: solid 6px rgb(59, 11, 59);
+}
+ option{
+    font-size: 18px;
+}
+.img1{
+    border: solid black 12px;
+    width: 256px;
+    height: 298px;
+    margin-left: 26px;
+    float: left;
+    background-color: blue;
+ 
+}
+
+
+.img1 img{
+    width: 16rem;
+}
+.img2{
+    border: solid black 12px;
+    width: 256px;
+    height: 298px;
+    margin-left: 26px;
+float: right;
+background-color: blue; 
+margin-right: 26px; 
+}
+.img2 img{
+   width: 256px;
+   height: 298px;  
+
+}
+@media (min-width:768px){
+body{
+    background-color: white;
+}
+
+
+}
+
+@media (orientation: Portrait) {
+body{
+    background-color: rgb(170, 130, 207);
+}
+.img1{
+    visibility: hidden;
+}
+.img2{
+    visibility: hidden;
+}
+.csspreguntas {
+text-align: center;
+}
+    
+
+
+
+}
+.Final{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+position: absolute;
+left: 360px;
+height: 30px;
+}
+.Final button{
+    background-color: rgb(169, 101, 217);
+    width: 130px;
+    height: 40px;
+    border: solid black 5px;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.Final button:hover{
+    background-color: crimson;
+    font-family: fantasy;
+}
+#pie{
+    margin: 50px;
+    border: solid black;
+}
