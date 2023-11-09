@@ -248,17 +248,18 @@ function gradeQuiz(){
 var paiseseleccion2 = document.getElementById("paiseseleccion2").value;
     if (paiseseleccion2 === "1") {
         score++;
-        feedback = "CORRECTOO ✔️";
+        feedback = "CORRECTO ✔️";
     } else {
-        feedback = "Incorrecta ❌ RETRO: Recuerda que la capital de Argentina es Buenos Aires.";
+        feedback = `<p> <b>Incorrecta ❌ RETRO: </b> Recuerda que la capital de Argentina es Buenos Aires.</p>`;
     }
-    document.getElementById("feedback2").innerText = feedback;
+
+    document.getElementById("feedback2").innerHTML   = feedback;
 
 //seccion3
 var paiseseleccion3 = document.getElementById("paiseseleccion3").value;
     if (paiseseleccion3=== "1") {
         score++;
-        feedback = "CORRECTOO ✔️";
+        feedback = "CORRECTO ✔️";
     } else {
         feedback = "Incorrecta ❌ RETRO: Recuerda que la capital de Costa Rica es San José..";
     }
@@ -267,7 +268,7 @@ var paiseseleccion3 = document.getElementById("paiseseleccion3").value;
     var paiseseleccion4 = document.getElementById("paiseseleccion4").value;
     if (paiseseleccion4 === "1") {
         score++;
-        feedback = "CORRECTOO ✔️";
+        feedback = "CORRECTO ✔️";
     } else {
         feedback = "Incorrecta ❌ RETRO: Recuerda que la capital de Venezuela es Caracas..";
     }
@@ -276,7 +277,7 @@ var paiseseleccion3 = document.getElementById("paiseseleccion3").value;
 var paiseseleccion5 = document.getElementById("paiseseleccion5").value;
     if (paiseseleccion5=== "1") {
         score++;
-        feedback = "CORRECTOO ✔️";
+        feedback = "CORRECTO ✔️";
     } else {
         feedback = "Incorrecta ❌ RETRO: Recuerda que la capital de Brasil es Brasilia..";
     }
@@ -285,7 +286,7 @@ var paiseseleccion5 = document.getElementById("paiseseleccion5").value;
 var paiseseleccion6 = document.getElementById("paiseseleccion6").value;
     if (paiseseleccion6 === "1") {
         score++;
-        feedback = "CORRECTOO ✔️";
+        feedback = "CORRECTO ✔️";
     } else {
         feedback = "Incorrecta ❌ RETRO: Recuerda que la capital de Perú es Lima.";
     }
@@ -294,7 +295,7 @@ var paiseseleccion6 = document.getElementById("paiseseleccion6").value;
 var paiseseleccion7= document.getElementById("paiseseleccion7").value;
     if (paiseseleccion7 === "1") {
         score++;
-        feedback = "CORRECTOO ✔️";
+        feedback = "CORRECTO ✔️";
     } else {
         feedback = "Incorrecta ❌ RETRO: Recuerda que la capital de Trinidad y Tobago es Puerto España.";
     }
@@ -303,7 +304,7 @@ var paiseseleccion7= document.getElementById("paiseseleccion7").value;
 var paiseseleccion8 = document.getElementById("paiseseleccion8").value;
     if (paiseseleccion8 === "1") {
         score++;
-        feedback = "CORRECTOO ✔️";
+        feedback = "CORRECTO ✔️";
     } else {
         feedback = "Incorrecta ❌ RETRO: Recuerda que la capital de Cuba es La Habana.";
     }
@@ -312,7 +313,7 @@ var paiseseleccion8 = document.getElementById("paiseseleccion8").value;
 var paiseseleccion9 = document.getElementById("paiseseleccion9").value;
     if (paiseseleccion9 === "1") {
         score++;
-        feedback = "CORRECTOO ✔️";
+        feedback = "CORRECTO ✔️";
     } else {
         feedback = "Incorrecta ❌ RETRO: No olvides que la capital de Nicaragua es Managua.";
     }
@@ -321,7 +322,7 @@ var paiseseleccion9 = document.getElementById("paiseseleccion9").value;
 var paiseseleccion10 = document.getElementById("paiseseleccion10").value;
     if (paiseseleccion10 === "1") {
         score++;
-        feedback = "CORRECTOO ✔️";
+        feedback = "CORRECTO ✔️";
     } else {
         feedback = "Incorrecta ❌ RETRO: No olvides  que la capital de Ecuador es Quito.";
     }

@@ -30,8 +30,7 @@ padding: 0px;
     font-family: cursive;
 }  
 
-body{
-}
+
 .toma1{
     margin: 10px;
     border-radius: 20px;
@@ -60,7 +59,7 @@ margin-left: auto;
 margin-right: auto;
 padding: 30px;
 font-size: 22px;
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-family:  serif;
 }
 .csspreguntas select{
     font-size: 15.5px;
