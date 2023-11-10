@@ -33,20 +33,20 @@
             </div>
         </header>
 
-        <div style="display: flex;">
+        <div class="Cotizar-figura"  style="display: flex;">
             <div
                 style="display: flex;width: 100%;justify-content: center;gap: 110px;align-items: center;margin-left: 180px;">
                 <div
                     style="display: flex; flex-direction: column;align-items: center;">
 
                     <div class="marcadiv">
-                        <div class="secc1"><label class="Tit1">Marca</label>
+                        <div class="secc1"><label id="Marca" style="font-size: 23px;">Marca</label>
                             
                             <div class="opz">
                                 <!--OPC1-->
                                 <input type="radio" name="respuestas01" value="2000" id="valor01">
 
-                                <label style="font-size: 17.5px;margin: 19px;" for="valor01">Hot toy's</label>
+                                <label style="font-size: 17.5px;margin: 19px;" for="valor01">Hot toys</label>
                             </div>
                             <br>
 
@@ -73,7 +73,7 @@
                     <div class="marcadiv">
                         <div class="secc1">
                            
-                            <label class="Tit1">Tipo</label>
+                            <label id="Tipo" style="font-size: 23px;">Tipo</label>
                             <div  class="opz">
                                    <!--OPC1-->
                                    <input type="radio" name="respuestas02" value="350" id="valor04">
@@ -126,7 +126,7 @@
                     style="display: flex; flex-direction: column;align-items: center;">
 
                     <div class="marcadiv">
-                        <div class="secc1"><label class="Tit1">Edicion</label>
+                        <div class="secc1"><label id="Edicion" style="font-size: 23px">Edicion</label>
                             <div  class="opz" >
                                  <!--OPC1-->
                                  <input type="checkbox" name="respuestas04"value="  200  "id="valor010">
@@ -153,7 +153,7 @@
                                 <!--Piezas seccion5 check2-->
                 <div style="display: flex; flex-direction: column;align-items: center;">
                     <div class="marcadiv">
-                        <div class="secc1"><label class="Tit1">Piezas</label>
+                        <div class="secc1"><label id="Piezas" style="font-size: 23px;">Piezas</label>
                             <div class="opz">
                                  <!--OPC1-->
                                  <input type="checkbox" name="respuestas05"value="  150  "id="valor013">
@@ -183,7 +183,7 @@
    style="display: flex;width: 600px;justify-content: center;gap: 100px;align-items: center;">
 <div class="movimientos">
  <div  class="marcadiv">
-     <div   class="secc1"><label class="Tit1">Tamaños</label>
+     <div   class="secc1"><label id="Tamaño" style="font-size: 23px;">Tamaños</label>
 
          <div class="opz">
             <!--PREGUNTA6-->
@@ -222,7 +222,7 @@
                     style="display: flex; flex-direction: column;align-items: center;">
 
                     <div class="marcadiv">
-                        <div class="secc1"><label class="Tit1">Pedido</label>
+                        <div class="secc1"><label id="Pedido" style="font-size: 23px;">Pedido</label>
                              <br>
                              <br>
                             <div class="opz">
@@ -246,7 +246,7 @@
                 <div style="display: flex; flex-direction: column;align-items: center;">
 
                     <div class="marcadiv">
-                        <div class="secc1"><label class="Tit1">Contenido</label>
+                        <div class="secc1"><label id="Contenido" style="font-size: 23px;">Contenido</label>
                             <br>
                             
                             <div  class="opz">
@@ -287,8 +287,15 @@
                 <li class="costos" style="color: whitesmoke;">5</li>
                 <li class="costos" style="color: whitesmoke;">6</li>
                 <li class="costos" style="color: whitesmoke;">7</li>
-                <div style="color: red;margin-top: -80px;margin-left: 176px;">JAJAJAJA</div>
+                
             </ul>
+            <div style="color: rgb(104, 9, 133);margin-top: -100px;margin-left: 176px;"><p style="font-size: 19px;margin-top: -40px;" class="totaltxt">Total:</p></div>
+
+            <button  style="margin-left: 198px; border: solid white 4px;;  width: 110px;height: 35px;font-size: 19px;color: black;font-family: cursive;background-color: rgb(198, 156, 223);" type="submit" class="btn btn-raised btn-primary ">COTIZAR
+            </button>
+        </div>
+        <div class="refresh">
+            <button style="margin-left: 111px;margin-top: 70px;border: solid black 5px;      width: 128px;height: 35px; height: 40px;  font-size: 19px;color: black;font-family: cursive;background-color: rgb(250, 49, 49);" class="bonot" onclick="document.location.reload();">REINICIAR</button>
         </div>
 </div>
 </div>
@@ -306,13 +313,306 @@
             
 
             <script>
-                document.getElementById('Agregar').addEventListener('click', function() {
-                    let selec1 = document.querySelector('input[name="opcionesrb1"]:checked');
+                let total = 0;
+const radio = document.querySelector('input[type="radio"]');
 
-                
-                
-                
-                });
+
+class figura {
+    constructor(Marca, Tamaño, Edicion, Tipo, Piezas, Pedido, Contenido) {
+        this.Marca = Marca;
+        this.Tamaño = Tamaño;
+        this.Edicion = Edicion;
+        this.Tipo = radio.labels[0].textContent;
+        this.Piezas =Piezas;
+        this.Pedido = Pedido;
+        this.Contenido=Contenido;
+    }
+//Cotizar-figura
+cotizarCarpinteria() {
+    let cantidad;
+        let base = 0;
+
+        switch (this.Marca) {
+            case '1':
+                cantidad = base + 2000;
+                break;
+            case '2':
+                cantidad = base + 300;
+                break;
+            case '3':
+                cantidad = base + 100;
+                break;
+              
+        }
+
+        switch (this.Tamaño) {
+            case '1':
+                cantidad = cantidad + 150;
+                break;
+            case '2':
+                cantidad = cantidad + 200;
+                break;
+            case '3':
+                cantidad = cantidad + 350;
+                break;
+        }
+
+        switch (this.Tipo) {
+            case '1':
+                cantidad = cantidad + 300;
+                break;
+            case '2':
+                cantidad = cantidad + 400;
+                break;
+            case '3':
+                cantidad = cantidad + 100;
+                break;
+        }
+
+        switch (this.Edicion) {
+            case '1':
+                cantidad = cantidad + 200;
+                break;
+            case '2':
+                cantidad = cantidad + 400;
+                break;
+            case '3':
+                cantidad = cantidad + 200;
+                break;
+        }
+
+        switch (this.Piezas) {
+            case '1':
+                cantidad = cantidad + 150;
+                break;
+            case '2':
+                cantidad = cantidad + 200;
+                break;
+            case '3':
+                cantidad = cantidad + 50;
+                break;
+            
+        }
+
+        switch (this.Contenido) {
+            case '1':
+                cantidad = cantidad + 200;
+                break;
+            case '2':
+                cantidad = cantidad + 100;
+                break;
+            case '3':
+                cantidad = cantidad + 150;
+                break;
+        }
+
+        switch (this.Pedido) {
+            case '1':
+                cantidad = cantidad + 300;
+                break;
+            case '2':
+                cantidad = cantidad + 700;
+                break;
+        }
+
+       
+        console.log(cantidad)
+        cantidad = cantidad + total;
+        return cantidad;
+    }
+}
+         //parte visual HTML
+function Interfaz() { }
+
+//Mensaje en HTml
+Interfaz.prototype.mostarMensaje = function (mensaje, tipo) {
+    const div = document.createElement("div");
+
+    if (tipo === 'error') {
+        div.classList.add('mensaje', 'error');
+    } else {
+        div.classList.add("mensaje", "correcto");
+    }
+
+    div.innerHTML = `${mensaje}`;
+    formulario.insertBefore(div, document.querySelector(".form-group"));
+
+    setTimeout(function () {
+        document.querySelector('.mensaje').remove();
+    }, 2000);
+};
+
+//imprime resultado de cotización
+Interfaz.prototype.mostrarResultado = function (carpin, total) {
+    const resultado = document.getElementById('resultado');
+    let Marca;
+    let Tamaño;
+    let Edicion;
+    let Tipo;
+    let Piezas;
+    let Contenido;
+    let Pedido;
+
+    switch (carpin.Marca) {
+        case '1':
+            Marca = 'Hot toy';
+            break;
+        case '2':
+            Marca = 'Marvel legends';
+            break;
+        case '3':
+            Marca = 'Hasbro';
+            break;
+        
+    }
+    
+        switch (carpin.Tamaño) {
+            case '1':
+                Tamaño = 'Pequeño';
+                break;
+            case '2':
+                Tamaño = 'Normal';
+                break;
+            case '3':
+                Tamaño = 'Grande';
+                break;
+        }
+
+          
+    switch (carpin.Pedido) {
+        case '1':
+            Pedido = 'Coleccion';
+            break;
+        case '2':
+            Pedido = 'Serie';
+            break;  
+    }
+    const radiotxt = document.querySelector('input[type="radio"]:checked');
+
+
+   tipo = radiotxt.labels[0].textContent;
+
+   switch (carpin.Tipo) {
+        case '1':
+        Tipo = 'Estatua';
+            break;
+        case '2':
+        Tipo = 'Articulado';
+            break;
+        case '3':
+            Tipo = 'Adorno';
+            break;
+    } 
+
+    switch (carpin.Piezas) {
+        case '1':
+            Piezas = 'Extremidades';
+            break;
+        case '2':
+            Piezas = 'Accesorios';
+            break;
+        case '3':
+            Piezas= 'Caja';
+            break;
+    }
+
+    switch (carpin.Contenido) {
+        case '1':
+            Contenido = 'Disco';
+            break;
+        case '2':
+            Contenido = 'Comic';
+            break;
+        case '3':
+            Contenido='Juego';
+            break;
+
+        }
+
+    switch (carpin.Edicion) {
+        case '1':
+            Edicion = 'Clasica';
+            break;
+        case '2':
+            Edicion = 'Vieja';
+            break;
+        case '3':
+            Edicion = 'Nueva';
+            break;
+    }
+}
+    //crear un div
+    const div = document.createElement('div');
+    //insertar la información
+    div.innerHTML = `
+    <p class="header">Tu total es de:</p>
+    <p>La marca elegida fue: ${Marca} </p>
+    <p>El tamaño elegido fue: ${Tamaño}</p>
+    <p>El tipo elegido fue: ${Tipo}</p>
+    <p>La edicion elegida fue: ${Edicion}</p>
+    <p>La pieza elegida fue: ${Piezas}</p>
+    <p>La pedido elegido fue: ${Pedido}</p>
+    <p>El contenido fue: ${Contenido}</p>
+    <p>Total: $ ${total}</p>    
+    `;
+   //capturar datops del formulario
+const formulario = document.getElementById('Cotizar-figura');
+
+formulario.addEventListener('submit', function (e) {
+    e.preventDefault();
+    //leer la marca seleccionada
+    const Marca = document.getElementById('Marca');
+    const marcaSeleccionada = Marca.options[Marca.selectedIndex].value;
+
+    //leer año seleccionado
+    /* const tamañoSeleccionado = radio.checked.value; */
+
+    const Tipo = document.getElementById("Edicion");
+    const edicionSeleccionado = Edicion.options[Edicion.selectedIndex].value;
+
+   /*  const tipo = document.getElementById("tipo");
+    const tipoSeleccionado = tipo.options[tipo.selectedIndex].value;
+ */
+    const Piezas = document.getElementById("Piezas");
+    const piezasSeleccionado = Piezas.options[Piezas.selectedIndex].value;
+
+    const Contenido = document.getElementById("Contenido");
+    const conteSeleccionado = Contenido.options[Contenido.selectedIndex].value;
+
+    const tipoSeleccionado = radio.checked.value;
+
+    const Tamaño = document.getElementById("Tamaño");
+    const tamañoSeleccionado = Tamaño.options[Tamaño.selectedIndex].value;
+
+    const Pedido = document.getElementById("Pedido");
+    const pedidoSeleccionado = Pedido.options[Pedido.selectedIndex].value;
+
+}
+//crear instancia de interfaz
+const interfaz = new Interfaz();
+    //revisamos que los campos no estén vacíos
+
+if (marcaSeleccionado === '' || tamañoSeleccionado === '' || edicionSeleccionado === '' || tipoSeleccionado === '' || pedidoSeleccionado === '' || conteSeleccionado === '' || piezasSeleccionado === '') {
+        //interfaz imprimiendo error
+        interfaz.mostarMensaje('Faltan Datos, revisa e intenta de nuevo', 'error');
+    } else {
+        //limpiar resultados anteriores
+        const resultados = document.querySelector('#resultado div');
+        if (resultados != null) {
+            resultados.remove();
+        }
+
+        const car = new carpint(marcaSeleccionado, tamañoSeleccionado, edicionSeleccionado, tipoSeleccionado, pedidoSeleccionado, conteSeleccionado, piezasSeleccionado);
+        //Cotizar el lucha
+        const cantidad = car.cotizarCarpinteria(car);
+        //mostrar resultado
+        interfaz.mostrarResultado(car, cantidad);
+        interfaz.mostarMensaje('Cotizando', 'correcto');
+
+    }
+
+;
+  
         </script>
         </body>
     </html>
